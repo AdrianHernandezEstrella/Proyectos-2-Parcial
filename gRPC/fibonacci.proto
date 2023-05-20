@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+message FibonacciRequest {
+  int32 n = 1;
+}
+
+message FibonacciResponse {
+  int32 result = 1;
+}
+
+service FibonacciCalculator {
+  rpc CalculateFibonacci(FibonacciRequest) returns (FibonacciResponse) {}
+}

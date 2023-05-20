@@ -1,0 +1,10 @@
+<h5 class="title-cart">
+    <i class="bi bi-cart-dash"></i>
+    Carrito de compras
+</h5>
+
+<ul>
+    <li *ngFor="let beer of cartList$ | async">
+        {{beer.name}}: {{beer.price | currency}} {{beer.quantity}}
+    </li>
+</ul>
